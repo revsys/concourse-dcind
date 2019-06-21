@@ -5,6 +5,7 @@ include .version
 version:
 	@echo "Using bumpversion"
 	bumpversion patch
+	git push; git push --tags
 
 build:
 	@echo "Building revolutionsytems/concourse-dcind:${IMAGE_TAG}..."
