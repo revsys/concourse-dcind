@@ -12,3 +12,4 @@ build:
 
 push:
 	docker push revolutionsystems/concourse-dcind:${IMAGE_TAG}
+	docker push revolutionsystems/concourse-dcind:latest
