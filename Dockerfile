@@ -1,19 +1,19 @@
-FROM alpine:3.7
+FROM alpine:3.10.0
 
 ENV DOCKER_CHANNEL=stable \
-    DOCKER_VERSION=17.12.1-ce \
-    DOCKER_COMPOSE_VERSION=1.19.0 \
+    DOCKER_VERSION=18.09.5 \
+    DOCKER_COMPOSE_VERSION=1.23.2 \
     DOCKER_SQUASH=0.2.0
 
 # Install Docker, Docker Compose, Docker Squash
 RUN apk --update --no-cache add \
-        bash \
-        curl \
-        device-mapper \
-        py-pip \
-        iptables \
-        ca-certificates \
-        && \
+    bash \
+    curl \
+    device-mapper \
+    py-pip \
+    iptables \
+    ca-certificates \
+    && \
     apk upgrade && \
     curl -fL "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" | tar zx && \
     mv /docker/* /bin/ && chmod +x /bin/docker* && \

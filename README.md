@@ -1,10 +1,12 @@
 # Concourse Docker-Compose-in-Docker
 
+**FORKED**: This was forked from [karlkfi/concourse-dcind](https://github.com/karlkfi/concourse-dcind).
+
 Optimized for use with [Concourse CI](http://concourse.ci/).
 
 The image is Alpine based, and includes Docker, Docker Compose, and Docker Squash, as well as Bash.
 
-Image published to Docker Hub: [karlkfi/concourse-dcind](https://hub.docker.com/r/karlkfi/concourse-dcind/).
+Image published to Docker Hub: [karlkfi/concourse-dcind](https://hub.docker.com/r/revolutionsystems/concourse-dcind/).
 
 Inspired by [meAmidos/dcind](https://github.com/meAmidos/dcind),  [concourse/docker-image-resource](https://github.com/concourse/docker-image-resource/blob/master/assets/common.sh), and [mesosphere/mesos-slave-dind](https://github.com/mesosphere/mesos-slave-dind).
 
@@ -46,7 +48,7 @@ jobs:
       image_resource:
         type: docker-image
         source:
-          repository: karlkfi/concourse-dcind
+          repository: revolutionsystems/concourse-dcind
       inputs:
       - name: code
       run:
