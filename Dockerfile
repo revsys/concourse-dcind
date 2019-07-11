@@ -32,6 +32,7 @@ RUN apk --update --no-cache add \
     rm -rf /var/cache/apk/* && \
     rm -rf /root/.cache
 
+COPY resolv.conf /tmp/resolv.conf
 COPY entrypoint.sh /bin/entrypoint.sh
 
 ENTRYPOINT ["entrypoint.sh"]
