@@ -20,6 +20,7 @@ RUN apk --update --no-cache add \
     libffi-dev \
     build-base \
     git \
+    openssh-client \
     && \
     apk upgrade && \
     curl -fL "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" | tar zx && \
