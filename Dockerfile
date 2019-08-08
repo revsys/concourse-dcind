@@ -27,6 +27,7 @@ RUN apk --update --no-cache add \
     mv /docker/* /bin/ && chmod +x /bin/docker* && \
     pip3 install docker-compose==${DOCKER_COMPOSE_VERSION} bumpversion==0.5.3 && \
     pip3 install awscli --upgrade --user && \
+    pip3 install vinnie --upgrade & \
     curl -fL "https://github.com/jwilder/docker-squash/releases/download/v${DOCKER_SQUASH}/docker-squash-linux-amd64-v${DOCKER_SQUASH}.tar.gz" | tar zx && \
     mv /docker-squash* /bin/ && chmod +x /bin/docker-squash* && \
     apk del build-base && \
